@@ -1,0 +1,23 @@
+class Solution:
+    def noConseBits(self, n : int) -> int:
+        # code here
+        if n==0:
+            return n
+        else:
+                
+            n = bin(n).replace("0b", "")[::-1]
+            c = 0
+            a=""
+            s=list(n)
+            for i in range(len(n)):
+                if c<3:
+                    if s[i]=='1':
+                        c+=1
+    
+                if c==2:
+                    s[i] == '0'
+                    c==0
+                    
+        a=a.join(s)[::-1]
+        ans = int(a,2)
+        return ans
